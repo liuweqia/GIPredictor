@@ -58,7 +58,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'GIPrdictor.urls'
+ROOT_URLCONF = 'GIPredictor.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'GIPrdictor.wsgi.application'
+WSGI_APPLICATION = 'GIPredictor.wsgi.application'
 
 
 # Database

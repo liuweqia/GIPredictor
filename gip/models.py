@@ -1,9 +1,15 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 
 
 class Category(models.Model):
     name = models.CharField(max_length=250, unique=True)
     views = models.IntegerField(default=0)
+    slug = models.SlugField(null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Category, self).save(*args, **kwargs)
 
     class Meta:
         ordering = ['name']

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from models import Category, Page
+from models import Category, Page, Data
 
 
 def index(request):
@@ -33,6 +33,24 @@ def about(request):
     context_dict['categories'] = categories
 
     return render(request, 'gip/about.html', context_dict)
+
+
+def page(request, category_name_slug):
+    context_dict = {}
+    categories = Category.objects.all()
+    cat = Category.objects.get(slug=category_name_slug)
+    pages = Page.objects.filter(category=cat)
+    context_dict['pages'] = pages
+
+    dates = Data.objects.all()
+
+    context_dict['categories'] = categories
+
+    context_dict['ss'] = "fjasoifwekfmoasj"
+
+    return render(request, 'gip/data.html', context_dict)
+    
+    
 
 
 

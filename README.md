@@ -1,4 +1,8 @@
-#is a website about gene island prodictor
+#is a website about gene island predictor
 <h3>这个项目是用django搭建一个网站，网站主要作用是给浏览者提供浏览数据，查询数据，下载数据以及了解数据获得的原理过程，给用户提供增删改查数据的功能以及其他的管理功能。</h3><br />
 <h3>目前项目正在进一步讨论功能以及处理数据阶段。</h3>
 <h3>数据由生环学院同学提供，主要是对基因岛中重要基因段的分析</h3>
+
+##python == 2.7.9
+  django == 1.8.5
+  
